@@ -1,159 +1,175 @@
-# 4kauanmota
+<div align="center">
 
-Portfólio pessoal de **Kauan Soares Mota**. Um site sobre memórias e sonhos: rolar a página é atravessar um dia inteiro, do céu dourado do meio-dia ao pôr do sol, à noite e ao amanhecer, sem nenhum corte entre uma seção e outra. A luz (o "o" do logotipo, as auréolas) marca a identidade e o novo capítulo nos jogos.
+<a href="https://4kauanmota.com.br"><img src="docs/readme/banner.svg" width="100%" alt="4kauanmota: a whole day, from noon to dawn, made of memories and dreams"></a>
 
-- **Projetos:** a lista vem direto do GitHub, do repositório mais novo ao mais antigo (pela data de criação), e se atualiza sozinha. Descrições em português e inglês, tipo de cada projeto (WEB, APP, JOGO…) e projetos privados ou de fora do GitHub ficam num arquivo de configuração do portfólio. O README de cada repositório abre dentro do próprio portfólio.
-- **Bilíngue de verdade:** português (padrão) e inglês, com troca sem recarregar a página.
-- **Estático:** sem banco de dados, sem servidor, sem token no navegador.
+**The portfolio of Kauan Soares Mota.**<br>
+A site about memories and dreams: scrolling the page is living through a whole day,<br>
+from the golden noon sky to sunset, night and dawn, with no cut between one section and the next.
 
-## Sumário
+<a href="https://4kauanmota.com.br"><img alt="Live at 4kauanmota.com.br" src="https://img.shields.io/badge/live-4kauanmota.com.br-e9d055?style=flat-square&labelColor=2a2518"></a>
+<img alt="Vue 3.5" src="https://img.shields.io/badge/Vue-3.5-a77ea8?style=flat-square&logo=vuedotjs&logoColor=white&labelColor=3a3d72">
+<img alt="Vite 8" src="https://img.shields.io/badge/Vite-8-f0a07e?style=flat-square&logo=vite&logoColor=white&labelColor=3a3d72">
+<img alt="TypeScript 6" src="https://img.shields.io/badge/TypeScript-6-a98cbb?style=flat-square&logo=typescript&logoColor=white&labelColor=3a3d72">
+<img alt="Node 22.12 or newer" src="https://img.shields.io/badge/Node-22.12%2B-eab3c1?style=flat-square&logo=nodedotjs&logoColor=white&labelColor=3a3d72">
+<img alt="Portuguese and English" src="https://img.shields.io/badge/languages-PT--BR%20%7C%20EN-f6bf91?style=flat-square&labelColor=3a3d72">
 
-- [Rodando no computador](#rodando-no-computador)
-- [Onde editar cada coisa](#onde-editar-cada-coisa)
-- [Como a integração com o GitHub funciona](#como-a-integração-com-o-github-funciona)
-- [Projetos de fora do GitHub](#projetos-de-fora-do-github)
-- [Imagens dos projetos](#imagens-dos-projetos)
-- [Logos das empresas](#logos-das-empresas)
-- [Idiomas](#idiomas)
-- [Sons](#sons)
-- [Publicando na Vercel](#publicando-na-vercel)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Identidade visual](#identidade-visual)
-- [Acessibilidade e movimento](#acessibilidade-e-movimento)
-- [Créditos](#créditos)
+</div>
 
-## Rodando no computador
+<br>
 
-Requisitos: **Node.js 22.12 ou mais novo** e npm.
+<p align="center">
+  <img src="docs/readme/preview.webp" width="100%" alt="A scroll through the site: the home page at noon, the projects gallery in the afternoon, the sunset on About with the star of now, a floppy disk going into the drive at night and the links at dawn.">
+</p>
+
+## One page, one day
+
+The light (the "o" in the logo, the halos) carries the identity and the new chapter in games. Every section is an hour of the day, and each sky ends in the exact color where the next one begins, with clouds crossing the borders.
+
+<img src="docs/readme/day.svg" width="100%" alt="Noon is Home, afternoon is Projects, sunset is About, night is Curiosities and dawn is Links.">
+
+| Hour | Section | What happens there |
+| --- | --- | --- |
+| ☀️ Noon | Home | A golden sky, painted clouds and wires swaying from a pole. A little bird walks along the wire, stops, hops now and then and flies off when you get close. A flock crosses the sky. |
+| 🪟 Afternoon | Projects | Window light across the room, dust in the beams, the shadow of a passing cloud, and the gallery. |
+| 🌇 Sunset | About | A sun that tells a story as you scroll: it appears, gains light, loses it, swells and comes apart until it bursts like a star. Postcards of what I do today and the journey. |
+| 🌙 Night | Curiosities | Stars, an old TV and a floppy drive floating in the air, and fragments of a film made of memories. Pick a floppy disk and it goes into the drive. |
+| 🌅 Dawn | Links | Violet, lilac, pink and gold. A sea of clouds, the sun rising behind it and the light coming back. |
+
+## What's inside
+
+- **Projects straight from GitHub.** The list comes from my repositories, newest to oldest (by creation date), and updates itself. Descriptions in Portuguese and English, each project's type (WEB, APP, GAME…) and private or non-GitHub projects live in one config file. Each repository's README opens right inside the portfolio.
+- **Truly bilingual.** Portuguese (the default) and English, switching without reloading the page.
+- **Static.** No database, no server, no token in the browser.
+- **Sounds made on the spot** with the Web Audio API. Nothing plays on its own, and the speaker button turns them off.
+- **Built for everyone.** Keyboard navigation everywhere, AA contrast, screen reader announcements, and a calm version for "reduce motion".
+
+## Quick start
+
+You need **Node.js 22.12 or newer** and npm.
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173 (e /en/, /links/, /en/links/)
+npm run dev          # http://localhost:5173 (also /en/, /links/ and /en/links/)
 ```
 
-| Comando | O que faz |
+| Command | What it does |
 | --- | --- |
-| `npm run dev` | Servidor de desenvolvimento. Usa o último snapshot dos projetos, sem chamar a API. |
-| `npm run sync:github` | Busca os repositórios no GitHub e atualiza o snapshot dos projetos (nomes, datas, links publicados) e os READMEs. |
-| `npm run build` | Sincroniza com o GitHub (se a API falhar, mantém o snapshot) e gera o site em `dist/`. |
-| `npm run build:offline` | Gera o site sem sincronizar. |
-| `npm run preview` | Abre o `dist/` localmente, como vai ficar publicado. |
-| `npm test` | Testes da configuração e da junção dos projetos, das categorias, dos links publicados (inclusive os que usam o endereço deste portfólio), da limpeza e da fidelidade dos READMEs, da distribuição da trajetória, do sol, das fitas de filme (geometria e chicote), dos links, do conteúdo bilíngue e da pontuação (nenhum travessão nos textos). |
-| `npm run typecheck` | Checagem de tipos (Vue + TypeScript). |
+| `npm run dev` | Development server. Uses the latest project snapshot, without calling the API. |
+| `npm run sync:github` | Fetches the repositories from GitHub and updates the project snapshot (names, dates, published links) and the READMEs. |
+| `npm run build` | Syncs with GitHub (if the API fails, it keeps the snapshot) and builds the site into `dist/`. |
+| `npm run build:offline` | Builds the site without syncing. |
+| `npm run preview` | Serves `dist/` locally, exactly as it will be published. |
+| `npm test` | Tests for the project config and merging, categories, published links (including the ones that use this portfolio's address), README cleanup and fidelity, the journey layout, the sun, the film strips (geometry and whip), links, bilingual content and punctuation (no dashes in the texts). |
+| `npm run typecheck` | Type checking (Vue + TypeScript). |
 
-> **Dica:** sem token, a API do GitHub aceita só 60 requisições por hora por IP. A primeira sincronização usa umas 30 (uma por repositório, para buscar o README); as seguintes, só 1 mais uma por repositório que recebeu push desde a última vez. Para sincronizar à vontade, copie `.env.example` para `.env` e preencha `GITHUB_TOKEN`.
+> [!TIP]
+> Without a token, the GitHub API allows only 60 requests per hour per IP. The first sync uses about 30 (one per repository, to fetch its README); later ones use 1, plus one per repository that got a push since the last time. To sync freely, copy `.env.example` to `.env` and fill in `GITHUB_TOKEN`.
 
-## Onde editar cada coisa
+## Where to edit what
 
-Todo o conteúdo fica em `src/content/`. Os componentes só leem desses arquivos.
+All the content lives in `src/content/`. The components only read from those files.
 
-| Quero mudar… | Arquivo |
+| I want to change… | File |
 | --- | --- |
-| **Retrato do início do site** | Coloque a imagem em `src/assets/profile/` (foco e texto alternativo em `src/content/profile.ts`) |
-| Texto "Sobre mim" (resumo e "Ler mais"), trajetória, ferramentas | `src/content/about.ts` |
-| **Curiosidades** (os disquetes) | `src/content/curiosities.ts` |
-| **Links e redes sociais** | `src/content/links.ts` (plataformas disponíveis em `platforms.ts`) |
-| **Descrição de um projeto** (português e inglês) | `src/content/projects.config.ts` → `projectDetails` |
-| **Tipo de um projeto** (WEB, APP, JOGO, CLI…) e filtros | `src/content/projects.config.ts` → `kind` e `also` |
-| **Link do "Ver site"** (trocar ou esconder) | Campo *Website* do repositório no GitHub, ou `liveUrl` em `projectDetails` |
-| **Projeto privado ou de fora do GitHub** | `src/content/projects.config.ts` → `externalProjects` |
-| **Imagem de um projeto** | `src/assets/projects/` (arquivo com o nome do repositório ou o `id`) |
-| **Logo de uma empresa** da trajetória | `src/assets/companies/` (arquivo com o valor de `company`) |
-| Esconder projetos, mostrar forks | Tópico `portfolio-hide` no GitHub, ou `src/content/projects.config.ts` |
-| Textos da interface (botões, títulos, mensagens) | `src/i18n/messages/pt-BR.ts` e `en.ts` |
-| Título e descrição para buscadores e prévias de link | `src/i18n/meta.ts` |
-| Nome de usuário do GitHub, endereço do site | `src/content/site.ts` |
-| Cores, fontes e espaçamentos | `src/styles/tokens.css` |
-| Efeitos sonoros | `src/composables/sound.ts` |
+| **The portrait on the home page** | Drop the image in `src/assets/profile/` (focus and alt text in `src/content/profile.ts`) |
+| The "About me" text (summary and "Read more"), the journey, the tools | `src/content/about.ts` |
+| **Curiosities** (the floppy disks) | `src/content/curiosities.ts` |
+| **Links and social profiles** | `src/content/links.ts` (available platforms in `platforms.ts`) |
+| **A project's description** (Portuguese and English) | `src/content/projects.config.ts` → `projectDetails` |
+| **A project's type** (WEB, APP, GAME, CLI…) and filters | `src/content/projects.config.ts` → `kind` and `also` |
+| **The "Visit site" link** (change or hide it) | The repository's *Website* field on GitHub, or `liveUrl` in `projectDetails` |
+| **A private or non-GitHub project** | `src/content/projects.config.ts` → `externalProjects` |
+| **A project's image** | `src/assets/projects/` (file named after the repository or the `id`) |
+| **A company logo** in the journey | `src/assets/companies/` (file named after the `company` value) |
+| Hide projects, show forks | The `portfolio-hide` topic on GitHub, or `src/content/projects.config.ts` |
+| Interface texts (buttons, titles, messages) | `src/i18n/messages/pt-BR.ts` and `en.ts` |
+| Title and description for search engines and link previews | `src/i18n/meta.ts` |
+| GitHub username, site address | `src/content/site.ts` |
+| Colors, fonts and spacing | `src/styles/tokens.css` |
+| Sound effects | `src/composables/sound.ts` |
 
-### Retrato do início do site
+## Guides
 
-1. Coloque **uma** imagem na pasta `src/assets/profile/`, com qualquer nome (`retrato.webp`, `foto.jpg`…). Valem WebP, AVIF, PNG, JPG, GIF e SVG.
-2. Pronto: ela aparece sozinha no início do site e, pequena, na página /links. Com o `npm run dev` rodando, a troca aparece na hora, sem recarregar.
-3. Para trocar, apague a imagem antiga e coloque a nova. Não precisa mexer em código. Cada imagem nova ganha um endereço novo no build, então ninguém fica vendo a antiga em cache.
-4. Faça o commit da imagem junto: é o arquivo da pasta que vai para o site publicado.
+Click a guide to open it.
 
-Os ajustes ficam em `src/content/profile.ts` e valem para qualquer imagem: `focus` (o ponto da imagem que fica no centro do recorte, como `'50% 25%'`), `alt` (o texto alternativo, em português e inglês) e `haloTop` (a altura da auréola do retrato pequeno da página de links, para ela ficar logo acima da cabeça). No início do site o retrato fica limpo, sem auréola.
+<details>
+<summary><b>🖼️ The portrait on the home page</b></summary>
+<br>
 
-Com a pasta vazia, o espaço do retrato continua reservado no início do site, vazio, e a página /links aparece sem retrato. Se a imagem não carregar, acontece o mesmo. Com mais de uma imagem na pasta, vale a primeira em ordem alfabética (o `npm run dev` avisa no console). O recorte é 4:5, de preferência com uns 1000 × 1250 px, e as bordas se dissolvem na luz, então imagens com fundo simples ou transparente funcionam melhor. A pasta tem um `README.md` com esse mesmo passo a passo.
+1. Put **one** image in `src/assets/profile/`, with any name (`portrait.webp`, `photo.jpg`…). WebP, AVIF, PNG, JPG, GIF and SVG all work.
+2. That's it: it shows up on its own on the home page and, small, on the /links page. With `npm run dev` running, the change appears right away, without reloading.
+3. To swap it, delete the old image and add the new one. No code changes. Every new image gets a new address in the build, so nobody keeps seeing the old one from cache.
+4. Commit the image too: the file in that folder is what goes to the published site.
 
-### Sobre mim e trajetória
+The settings live in `src/content/profile.ts` and apply to any image: `focus` (the point of the image that stays in the center of the crop, like `'50% 25%'`), `alt` (the alt text, in Portuguese and English) and `haloTop` (the height of the halo over the small portrait on the links page, so it sits right above the head). On the home page the portrait stays clean, with no halo.
 
-Em `src/content/about.ts`:
+With the folder empty, the portrait space stays reserved on the home page, empty, and the /links page shows no portrait. The same happens if the image fails to load. With more than one image in the folder, the first in alphabetical order wins (`npm run dev` warns in the console). The crop is 4:5, ideally around 1000 × 1250 px, and the edges dissolve into the light, so images with a simple or transparent background work best. The folder has its own `README.md` with these same steps.
 
-- `aboutSummary` é o resumo que aparece sempre; `aboutMore` são os parágrafos que abrem com **Ler mais**. Os dois formam um texto só, que corre como numa página de revista: enquanto os cartões-postais de "o que faço hoje" ocupam a direita, o texto fica à esquerda deles; quando eles acabam, o texto passa a usar a largura toda, sem divisões. Em telas estreitas, os cartões vêm depois do texto. Os idiomas fecham a carta.
-- Cada item de `timeline` tem uma trilha (`lane`: `study`, `work` ou `games`), início e fim no formato `'AAAA-MM'` ou `'AAAA-MM-DD'`, em qualquer ordem: a trajetória se organiza pelas datas. Sem `end`, o item continua até hoje.
-- **Tamanho pelo tempo:** cada experiência tem uma linha com o comprimento da duração real (a formação vai até o fim dela, mesmo com outras coisas acontecendo no meio). A caixa fica sempre no tamanho natural do texto e, ao rolar, desce junto da própria linha enquanto ela dura; a linha continua depois da caixa quando a experiência é mais longa que o texto. Quando o texto é mais longo que a duração, a linha cresce o bastante para a caixa caber, sem atropelar a próxima. O que acontece ao mesmo tempo aparece lado a lado: um item sozinho fica centralizado, dois dividem o espaço meio a meio, três ou mais se dividem por igual. Se a tela não comporta todas as colunas, elas se redistribuem; no celular os cartões empilham, com fios paralelos mostrando o que foi simultâneo. Nada tem posição fixa.
-- **Textos das experiências:** os da Prefeitura de Juiz de Fora, da Compass UOL e da Afilio são os do LinkedIn, sem mudar nada no português (o inglês é a tradução); na Compass UOL foi acrescentada a frase da certificação AWS Certified Cloud Practitioner (conquistada nesse período). Os do Instituto Vianna Júnior e da LEVTY são os que você escreveu para o portfólio. Para trocar, edite `text` no item; uma linha em branco (`\n\n`) separa os parágrafos. O texto aparece na trajetória e, nas experiências que continuam até hoje, também no cartão-postal de "o que faço hoje".
-- **Logos:** o campo `company` liga o item à logo em `src/assets/companies/` (veja [Logos das empresas](#logos-das-empresas)). Sem arquivo, o item aparece normalmente, sem logo.
-- A trajetória termina numa auréola de estrelas em órbita: o "agora" (tocar nela faz um sininho).
-- **O que faço hoje:** os cartões-postais ao lado do resumo saem da própria trajetória (os itens sem `end`), então não há nada para manter em dois lugares.
-- Os idiomas que você fala (`spokenLanguages`) aparecem dentro do próprio resumo, sem uma área separada.
+</details>
 
-### Curiosidades
+<details>
+<summary><b>🌇 About me and the journey</b></summary>
+<br>
 
-Cada item vira um disquete. Para adicionar, copie um bloco em `curiosities.ts`, troque o `id` e preencha os dois idiomas:
+In `src/content/about.ts`:
+
+- `aboutSummary` is the summary that is always visible; `aboutMore` holds the paragraphs that open with **Read more**. Together they form a single text that flows like a magazine page: while the "what I do today" postcards take the right side, the text stays to their left; when they end, the text uses the full width, with no breaks. On narrow screens the postcards come after the text. The languages close the letter.
+- Each `timeline` item has a lane (`lane`: `study`, `work` or `games`) and a start and end in the `'YYYY-MM'` or `'YYYY-MM-DD'` format, in any order: the journey arranges itself by date. Without `end`, the item runs until today.
+- **Sized by time:** each experience has a line as long as its real duration (an education entry runs until its end, even with other things happening in between). The box always keeps the natural size of its text and, as you scroll, travels down along its own line while it lasts; the line continues past the box when the experience is longer than the text. When the text is longer than the duration, the line grows just enough for the box to fit, without running over the next one. Things that happened at the same time sit side by side: a single item is centered, two split the space in half, three or more split it evenly. If the screen can't hold every column, they redistribute; on phones the cards stack, with parallel threads showing what happened at the same time. Nothing has a fixed position.
+- **Experience texts:** the ones for Prefeitura de Juiz de Fora, Compass UOL and Afilio are the ones from LinkedIn, with the Portuguese untouched (the English is the translation); Compass UOL also has the AWS Certified Cloud Practitioner sentence (earned during that period). The ones for Instituto Vianna Júnior and LEVTY were written for the portfolio. To change one, edit the item's `text`; a blank line (`\n\n`) separates paragraphs. The text shows in the journey and, for experiences that are still ongoing, also on the "what I do today" postcard.
+- **Logos:** the `company` field links the item to a logo in `src/assets/companies/` (see the company logos guide). Without a file, the item shows normally, just without a logo.
+- The journey ends in a halo of orbiting stars: the "now" (tapping it rings a little bell).
+- **What I do today:** the postcards next to the summary come from the journey itself (the items without `end`), so there is nothing to keep in two places.
+- The languages you speak (`spokenLanguages`) appear inside the summary itself, with no separate area.
+
+</details>
+
+<details>
+<summary><b>💾 Curiosities (the floppy disks)</b></summary>
+<br>
+
+Each item becomes a floppy disk. To add one, copy a block in `src/content/curiosities.ts`, change the `id` and fill in both languages. The comment at the top of the file has the same template.
 
 ```ts
 {
   id: 'favorite-game',
-  topic: { 'pt-BR': 'jogo favorito', en: 'favorite game' },      // etiqueta do disquete
-  answer: { 'pt-BR': 'Nome do jogo', en: 'Game name' },          // resposta curta
-  note: { 'pt-BR': 'Por que eu gosto…', en: 'Why I like it…' },  // o porquê
-  image: { src: 'images/curiosities/jogo.webp', alt: { 'pt-BR': '…', en: '…' } }, // opcional
-  color: 'blue', // lilac | pink | blue | mint | yellow | peach (opcional)
+  topic: { 'pt-BR': 'jogo favorito', en: 'favorite game' },      // written on the disk label
+  answer: { 'pt-BR': 'Nome do jogo', en: 'Game name' },          // the short answer
+  note: { 'pt-BR': 'Por que eu gosto…', en: 'Why I like it…' },  // the why
+  image: { src: 'images/curiosities/game.webp', alt: { 'pt-BR': '…', en: '…' } }, // optional, file in public/images/curiosities/
+  color: 'blue', // lilac | pink | blue | mint | yellow | peach (optional)
 },
 ```
 
-Os itens com `draft: true` (jogo, filme e anime favoritos, referências artísticas) só aparecem em `npm run dev`, para lembrar de preencher. Quando completar um, apague a linha `draft: true`.
+An item with `draft: true` only shows up in `npm run dev`, never on the published site.
 
-Escolher um disquete coloca ele no leitor e mostra o conteúdo na tela: o disquete voa até a entrada do leitor, a tela faz um glitch ao ligar e as ondas de rádio saem da TV.
+Picking a floppy disk puts it in the drive and shows its content on the screen: the disk flies to the drive's slot, the screen glitches as it turns on and radio waves ripple out of the TV. Picking another one ejects the current disk (it flies back to the box) before the new one goes in, so the screen never shows two memories at once. The arrow keys move between disks, Enter inserts and the drive's button ejects. When the text is long, the screen grows slowly to fit it.
 
-**Fitas de filme:** fragmentos de um filme de lembranças soltos no ar, espalhados pelas bordas da tela (passam da largura do conteúdo e ocupam as laterais), em direções diferentes (em pé, deitados, na diagonal e em curva) e em três profundidades: os de longe e do meio passam por trás da TV e da caixa; os de perto ficam na frente, nos cantos livres. São delicados, um complemento da cena: bem transparentes, de pouco contraste e em tons pastéis. Nenhum prende ou liga os aparelhos: a TV e o leitor flutuam sozinhos. A película é rosa antigo, pouco saturada (um eco suave do vermelho do filme revelado), com furos vazados de verdade, bordas que pegam um pouco da luz da TV, granulação, um risco fino de projetor e um queimado de luz cor de pêssego nas pontas. Cada quadro deixa passar uma luz rosada, e **todo quadro tem uma lembrança desenhada em silhueta escura e suave**, enquadrada como numa foto (às vezes um pedaço fica fora do quadro): famílias caminhando, duas pessoas num banco, alguém na chuva com o guarda-chuva, um guarda-chuva dividido, pipa, passeio com o cachorro, balanço, piquenique, montanhas, mar, farol, casa, bicicleta, passarinhos no fio, lua e estrelas, estrela cadente, balão, gato na janela, abraço, roda-gigante, barco no lago, leitura sob o poste, pinheiros, pôr do sol a dois, aviãozinho de papel e fogueira. Os desenhos se espalham pela cena sem se repetir lado a lado, e ficam sempre em pé dentro do quadro. Cada fragmento deriva no seu ritmo (os de longe ficam parados), então o céu parece vivo sem que tudo se mova junto. A composição se refaz para cada largura de tela, a partir da posição da TV, do leitor, da caixa e dos textos (`src/components/curiosities/FilmScene.vue`; a geometria fica em `src/lib/film.ts` e os desenhos em `src/lib/memories.ts`).
+**Film strips:** fragments of a film made of memories, floating in the air along the edges of the screen (past the content width, into the sides), in different directions (upright, lying down, diagonal and curved) and at three depths: the far and middle ones pass behind the TV and the box; the near ones sit in front, in the free corners. They are delicate, a complement to the scene: very transparent, low contrast and in pastel tones. None of them holds or connects the devices: the TV and the drive float on their own. The film is an old rose, barely saturated (a soft echo of the red of developed film), with real cut-out perforations, edges that catch a little of the TV's light, grain, a thin projector scratch and a peach light burn at the ends. Each frame lets a rosy light through, and **every frame holds a memory drawn as a dark, soft silhouette**, framed like a photo (sometimes a piece falls outside the frame): families walking, two people on a bench, someone in the rain with an umbrella, a shared umbrella, a kite, a walk with the dog, a swing, a picnic, mountains, the sea, a lighthouse, a house, a bicycle, birds on a wire, moon and stars, a shooting star, a balloon, a cat at the window, a hug, a Ferris wheel, a boat on a lake, reading under a lamppost, pine trees, a sunset for two, a paper plane and a campfire. The drawings spread across the scene without repeating side by side, and always stand upright inside the frame. Each fragment drifts at its own pace (the far ones stay still), so the sky feels alive without everything moving together. The composition rebuilds itself for every screen width, from the position of the TV, the drive, the box and the texts (`src/components/curiosities/FilmScene.vue`; the geometry is in `src/lib/film.ts` and the drawings in `src/lib/memories.ts`).
 
-**A onda das fitas:** quando o disquete assenta no leitor, além das ondas de rádio da TV, uma onda nasce na fenda e atravessa os fragmentos, primeiro os de perto e depois os de longe, deformando cada um ao longo do comprimento até se dissipar. Inserções seguidas somam as ondas, e no fim tudo volta exatamente à posição de repouso. A tela muda de altura devagar quando o texto é longo. Escolher outro ejeta o atual (ele volta para a caixa) antes de o novo entrar, então a tela nunca mostra duas lembranças ao mesmo tempo. Também dá para usar as setas do teclado entre os disquetes, Enter para inserir e o botão do leitor para ejetar.
+**The wave in the strips:** when the floppy disk settles in the drive, besides the TV's radio waves, a wave is born at the slot and runs through the fragments, the near ones first and then the far ones, bending each one along its length until it fades away. Back-to-back insertions add their waves together, and in the end everything returns exactly to rest.
 
-### Links
+</details>
 
-Em `src/content/links.ts`, cada linha é um link, na ordem em que aparece: GitHub, LinkedIn, o seu perfil no site do Pixel Mole (`pixelmole.com.br/members/4kauanmota`, com o símbolo comum de link, uma corrente, no mesmo estilo dos outros ícones) e e-mail. Só entram perfis confirmados; há exemplos comentados para itch.io e Instagram. A seção **Links** e a página **/links** (feita para a bio das redes sociais, e linkada logo abaixo de "Em todo lugar, 4kauanmota.", na seção Links) usam a mesma lista. A página /links é compacta: retrato, nome e um painel só com os links (o e-mail tem um botão de copiar).
+<details>
+<summary><b>🔗 Links</b></summary>
+<br>
 
-## Como a integração com o GitHub funciona
+In `src/content/links.ts`, each line is a link, in the order it appears: GitHub, LinkedIn, your profile on the Pixel Mole site (`pixelmole.com.br/members/4kauanmota`, with the common link symbol, a chain, in the same style as the other icons) and email. Only confirmed profiles go in; there are commented examples for itch.io and Instagram. The **Links** section and the **/links** page (made for social media bios, and linked right below "Everywhere, 4kauanmota." in the Links section) use the same list. The /links page is compact: portrait, name and a panel with just the links (the email has a copy button).
 
-**Por que no build e não no navegador:** a API pública sem token permite 60 requisições por hora *por visitante*, e qualquer rede compartilhada estouraria o limite. Um token também não pode ir para o navegador. Por isso o site busca tudo **durante o build**, com o token guardado só no servidor, e entrega um arquivo pronto e rápido.
+</details>
 
-O script `scripts/sync-github.ts`:
+<details>
+<summary><b>🏷️ Project descriptions, types and links</b></summary>
+<br>
 
-1. Lista os repositórios públicos de `4kauanmota`. Ficam de fora os forks, o repositório de perfil e os que tiverem o tópico `portfolio-hide`.
-2. Ordena pela **data de criação** do repositório, do mais novo para o mais antigo (a data de atualização não muda a ordem).
-3. Monta o nome a partir do nome do repositório, sem o sufixo da sua convenção (`manda-trends-web` → "Manda Trends", `food-api` → "Food"): o tipo aparece na etiqueta ao lado do nome, sem repetir.
-4. Baixa o README de cada repositório e o converte para HTML **no build** (veja [O leitor de README](#o-leitor-de-readme)). Repositório sem push desde a última sincronização reaproveita o README já convertido, sem gastar requisição. Sem README, o botão **Ler README do projeto** não aparece.
-5. Confere se o site publicado (campo *Website* do repositório ou GitHub Pages) responde. Links fora do ar ficam de fora. Um link que usa um endereço deste portfólio (`4kauanmota.com.br` ou o da Vercel, em `src/content/site.ts`) só sai se a página publicada lá for mesmo este portfólio (o script abre a página e procura a assinatura dele): hoje o `space-portfolio-web` aponta para `4kauanmota.vercel.app`, onde ainda está o portfólio antigo, então o **Ver site** aparece. Quando este portfólio passar a ocupar esse endereço, o link sai sozinho na sincronização seguinte. Sem rede para conferir, o link só sai se o endereço for o do próprio deploy (`SITE_URL` ou o domínio de produção da Vercel).
-6. Grava `src/generated/projects.json` e um arquivo por README em `src/generated/readmes/`, que entram no site.
-7. Mostra no log um resumo: que projetos têm o botão **Ver site** (e se o link veio do GitHub ou da configuração), quais estão sem descrição e quais repositórios ainda não têm entrada na configuração.
-
-No navegador, a lista do GitHub é juntada com `src/content/projects.config.ts` (descrições, tipos, links e projetos de fora do GitHub). O que é editado à mão nunca vem do GitHub, e o que vem do GitHub nunca precisa ser copiado para a configuração.
-
-Repositório novo aparece sozinho no próximo build, no começo da lista (é o mais recente), com o tipo sugerido pelos tópicos e pela linguagem e sem descrição, até você completar a entrada dele. Se a API falhar no build, o site usa o último snapshot salvo e continua no ar. Se o limite da API acabar no meio, a lista e os links novos são gravados mesmo assim.
-
-> **"Ver site" não apareceu depois de preencher o *Website* no GitHub?** O site é gerado no build, então a mudança só aparece num deploy novo: faça um push, rode o deploy na Vercel ou configure a [atualização automática](#atualização-automática-dos-projetos). Sem `GITHUB_TOKEN`, a Vercel pode esbarrar no limite da API e usar o snapshot antigo; o log do build mostra a lista de links encontrados. Para definir o link sem depender do GitHub, use `liveUrl` em `projectDetails`.
-
-### O leitor de README
-
-O botão **Ler README do projeto** abre o README dentro do portfólio, numa janela de leitura (em vez de mandar para o GitHub). Títulos, listas, tabelas (que rolam para o lado no celular), blocos de código, citações, avisos do GitHub (`> [!NOTE]`…), listas de tarefas e imagens aparecem formatados; com três títulos ou mais, surge um sumário. Fecha com o X, com Esc, clicando fora ou com o botão voltar do navegador, e o foco volta para o card.
-
-**Fiel ao GitHub:** o alinhamento que o README pede é respeitado (`<p align="center">`, `<div align="center">`, imagens e títulos centralizados, imagens com `align="left"` ou `align="right"` ao lado do texto e o alinhamento das colunas das tabelas). Imagens e selos (badges) ficam lado a lado como no GitHub, sem esticar; imagens largas nunca passam da largura do leitor. Imagens feitas só para o tema escuro do GitHub (`#gh-dark-mode-only` e `<picture>` com `prefers-color-scheme: dark`) ficam de fora, para não aparecerem duas vezes.
-
-**Segurança:** o README é conteúdo de fora, então é tratado como não confiável. Ele é convertido no build com `marked` e passa por `sanitize-html` com uma lista fechada do que pode ficar: sem scripts, `iframe`, formulários, `style`, atributos de evento (`onclick`…) ou SVG embutido; links só `https:` e `mailto:`; imagens só `https:`. Links e imagens relativos apontam para o repositório no GitHub. Nenhum token chega ao navegador: o site só carrega o HTML já limpo, e só quando a pessoa abre o leitor.
-
-### Descrições, tipos e links
-
-Tudo fica em `src/content/projects.config.ts`, em `projectDetails`, com uma entrada por repositório:
+Everything lives in `src/content/projects.config.ts`, in `projectDetails`, with one entry per repository:
 
 ```ts
 'dev-calc-web': {
-  kind: 'web',                       // WEB, APP, JOGO… (etiqueta ao lado do nome e filtro principal)
-  also: ['tools'],                   // opcional: outros filtros em que o projeto aparece
-  liveUrl: 'https://devcalc.app/',   // opcional: troca o link do "Ver site"; null esconde o botão
+  kind: 'web',                       // WEB, APP, GAME… (tag next to the name and main filter)
+  also: ['tools'],                   // optional: other filters the project shows up in
+  liveUrl: 'https://devcalc.app/',   // optional: replaces the "Visit site" link; null hides the button
   description: {
     'pt-BR': 'Calculadora que usa a sintaxe das linguagens de programação…',
     en: 'A calculator that uses programming language syntax…',
@@ -161,191 +177,268 @@ Tudo fica em `src/content/projects.config.ts`, em `projectDetails`, com uma entr
 },
 ```
 
-- **Tipos:** `web`, `app`, `game`, `cli`, `api`, `ai` e `lib`. No site: WEB, APP, JOGO (GAME em inglês), CLI, API, IA (AI em inglês) e LIB, sempre em letras maiúsculas ao lado do nome. O tipo vem só daqui (ou, para repositório sem entrada, dos tópicos e da linguagem), nunca de palavras do nome.
-- **Descrições:** as atuais foram escritas a partir dos READMEs e do código de cada repositório. Cabem três linhas no card (até uns 150 caracteres). `space-portfolio-web` e `forum-web` não têm README nem descrição no GitHub, então estão sem descrição (`null`) até você escrever. Sem descrição, o espaço fica vazio: nada é inventado.
-- A descrição do GitHub (*About*) não é mais usada no site.
+- **Types:** `web`, `app`, `game`, `cli`, `api`, `ai` and `lib`. On the site: WEB, APP, JOGO (GAME in English), CLI, API, IA (AI in English) and LIB, always in capitals next to the name. The type only comes from here (or, for a repository without an entry, from its topics and language), never from words in the name.
+- **Descriptions:** the current ones were written from each repository's README and code. Three lines fit on the card (up to about 150 characters). `space-portfolio-web` and `forum-web` have no README or description on GitHub, so they have no description (`null`) until you write one. Without a description, the space stays empty: nothing is made up.
+- The GitHub description (*About*) is no longer used on the site.
 
-### Curadoria sem mexer no código
+</details>
 
-Use **tópicos** (topics) nos repositórios do GitHub:
+<details>
+<summary><b>🧹 Curating without touching code</b></summary>
+<br>
 
-| Tópico | Efeito |
+Use **topics** on the GitHub repositories:
+
+| Topic | Effect |
 | --- | --- |
-| `portfolio-hide` | Esconde o projeto do site. |
-| `game`, `godot`, `gamedev`, `game-jam`… | Repositório sem entrada na configuração entra no filtro **Jogos** com a etiqueta JOGO. |
+| `portfolio-hide` | Hides the project from the site. |
+| `game`, `godot`, `gamedev`, `game-jam`… | A repository without an entry in the config goes into the **Games** filter with the GAME tag. |
 
-Em `src/content/projects.config.ts` dá para esconder repositórios pelo nome (`hidden`) e incluir forks (`includeForks`).
+In `src/content/projects.config.ts` you can also hide repositories by name (`hidden`) and include forks (`includeForks`).
 
-### Galeria
+</details>
 
-Os cards têm todos o mesmo tamanho: imagem, nome com a etiqueta do tipo, descrição no idioma do site, data de criação (no carimbo da imagem) e os botões do site, do repositório e do README. Enquanto a imagem de um projeto carrega, a foto mostra um pedacinho de céu em que uma constelação se forma (cada projeto com a sua, cada card no seu tempo); quando a imagem chega, o céu se dissolve nela. O espaço da foto é sempre o mesmo, então nada pula. Se a imagem falhar, ou demorar mais de 20 segundos, entra a arte do site no lugar (e a imagem ainda aparece se chegar depois). A galeria começa com os primeiros projetos (duas linhas no computador, três cards no celular) e abre com **Mostrar mais** (e fecha com **Mostrar menos**), sempre do mais novo ao mais antigo, inclusive com um filtro escolhido.
+<details>
+<summary><b>🗂️ Projects outside GitHub</b></summary>
+<br>
 
-Com o mouse sobre um card, ele sobe um pouco, uma luz acompanha o ponteiro e a imagem se desloca devagar no sentido contrário, como uma foto com profundidade. O card não muda de tamanho e nada cobre os botões. Com o teclado, o foco em qualquer botão do card dá o mesmo destaque.
-
-## Projetos de fora do GitHub
-
-Projetos privados, de clientes ou guardados em outro serviço entram em `externalProjects`, no mesmo arquivo. Cada item vira um card igual aos outros, na posição da data, com os mesmos filtros e animações. Não precisa mexer em nenhum componente.
+Private projects, client work or projects kept in another service go into `externalProjects`, in the same file. Each item becomes a card just like the others, placed by its date, with the same filters and animations. No component needs to change.
 
 ```ts
 export const externalProjects: ExternalProject[] = [
   {
-    id: 'loja-da-ana',               // obrigatório: único, minúsculas e hífens (também é o nome da imagem)
-    title: 'Loja da Ana',            // obrigatório
-    kind: 'web',                     // obrigatório
-    createdAt: '2026-05',            // obrigatório: 'AAAA-MM-DD' ou 'AAAA-MM'
-    description: { 'pt-BR': '…', en: '…' }, // obrigatório (pode ser null)
-    private: true,                   // opcional: mostra "Código privado" e nunca mostra o repositório
-    liveUrl: 'https://lojadaana.com.br/', // opcional: botão "Ver site"
-    repoUrl: 'https://gitlab.com/…', // opcional: repositório em outro serviço (ignorado se private)
-    image: '/projetos/loja.png',     // opcional: https ou arquivo de public/; sem ele, vale src/assets/projects/<id>
-    language: 'Vue',                 // opcional: aparece na arte genérica
-    also: ['apps'],                  // opcional: outros filtros
+    id: 'loja-da-ana',               // required: unique, lowercase and hyphens (also the image name)
+    title: 'Loja da Ana',            // required
+    kind: 'web',                     // required
+    createdAt: '2026-05',            // required: 'YYYY-MM-DD' or 'YYYY-MM'
+    description: { 'pt-BR': '…', en: '…' }, // required (can be null)
+    private: true,                   // optional: shows "Private code" and never shows the repository
+    liveUrl: 'https://lojadaana.com.br/', // optional: "Visit site" button
+    repoUrl: 'https://gitlab.com/…', // optional: repository in another service (ignored if private)
+    image: '/projetos/loja.png',     // optional: https or a file in public/; without it, src/assets/projects/<id> is used
+    language: 'Vue',                 // optional: shows on the generic artwork
+    also: ['apps'],                  // optional: other filters
   },
 ]
 ```
 
-- **Privado:** o card mostra um aviso discreto, "Código privado", no lugar do botão do repositório. O endereço do repositório nunca vai para a página, mesmo que esteja no arquivo.
-- **Sem repetição:** se o projeto ficar público no GitHub (mesmo `id` ou mesmo `repoUrl`), vale o do GitHub e este item é ignorado. Os testes e o log do build avisam.
-- Nunca coloque tokens ou senhas nesse arquivo: ele vai para o navegador.
+- **Private:** the card shows a discreet "Private code" note instead of the repository button. The repository address never reaches the page, even if it is in the file.
+- **No duplicates:** if the project becomes public on GitHub (same `id` or same `repoUrl`), the GitHub one wins and this item is ignored. The tests and the build log warn about it.
+- Never put tokens or passwords in this file: it goes to the browser.
 
-## Imagens dos projetos
+</details>
 
-Coloque a imagem em `src/assets/projects/`, com **o nome do repositório** (ou o `id` de um projeto de fora do GitHub) como nome do arquivo (ex.: `src/assets/projects/4notes-app.webp`). O site encontra sozinho; sem imagem, o card usa a arte do site.
+<details>
+<summary><b>📸 Project images</b></summary>
+<br>
 
-- Formatos: `.webp`, `.avif`, `.png`, `.jpg`, `.jpeg`, `.gif` e `.svg`. Maiúsculas e minúsculas no nome não importam. Com dois arquivos para o mesmo projeto, vale o primeiro dessa lista (e o build avisa).
-- **Captura de tela:** de preferência 16:10 (ex.: 1600 × 1000 px). Ela preenche a imagem do card a partir do topo; em outra proporção, as sobras são cortadas.
-- **Logo ou ícone:** imagens quase quadradas aparecem inteiras, centralizadas sobre a arte do projeto. PNG com fundo transparente ou SVG ficam melhores.
-- Renomeou o repositório? Renomeie a imagem também.
+Put the image in `src/assets/projects/`, named after **the repository** (or the `id` of a non-GitHub project), for example `src/assets/projects/4notes-app.webp`. The site finds it on its own; without an image, the card uses the site's artwork.
 
-A descoberta acontece no build (um plugin do Vite lê a pasta), então funciona igual na Vercel, sem nenhum pedido a mais no navegador. No build, as imagens viram WebP leve com nome versionado.
+- Formats: `.webp`, `.avif`, `.png`, `.jpg`, `.jpeg`, `.gif` and `.svg`. Upper or lower case in the name doesn't matter. With two files for the same project, the first in that list wins (and the build warns).
+- **Screenshot:** ideally 16:10 (for example 1600 × 1000 px). It fills the card image from the top; in other proportions, the extra is cropped.
+- **Logo or icon:** nearly square images show whole, centered over the project's artwork. PNG with a transparent background or SVG look best.
+- Renamed the repository? Rename the image too.
 
-## Logos das empresas
+Discovery happens in the build (a Vite plugin reads the folder), so it works the same on Vercel, with no extra request in the browser. In the build, the images become light WebP files with versioned names.
 
-As logos da trajetória ficam em `src/assets/companies/`, com o valor do campo `company` do item (em `src/content/about.ts`) como nome do arquivo:
+</details>
 
-| Experiência | Arquivo |
+<details>
+<summary><b>🏢 Company logos</b></summary>
+<br>
+
+The journey's logos live in `src/assets/companies/`, named after the item's `company` field (in `src/content/about.ts`):
+
+| Experience | File |
 | --- | --- |
-| Instituto Vianna Júnior | `instituto-vianna-junior.svg` (ou `.png`, `.webp`…) |
+| Instituto Vianna Júnior | `instituto-vianna-junior.jpg` |
 | Prefeitura de Juiz de Fora | `prefeitura-de-juiz-de-fora.png` |
-| Compass UOL | `compass-uol.svg` |
-| Afilio | `afilio.png` |
-| LEVTY | `levty.svg` |
-| Pixel Mole | `pixel-mole.webp` (já está lá: a mascote do estúdio) |
+| Compass UOL | `compass-uol.jpg` |
+| Afilio | `afilio.jpg` |
+| LEVTY | `levty.jpg` |
+| Pixel Mole | `pixel-mole.webp` (the studio's mascot) |
 
-- Formatos: `.svg`, `.png`, `.webp`, `.jpg`, `.jpeg` e `.avif`, de preferência com fundo transparente e sem margem grande em volta.
-- Empresa nova: escolha um nome em minúsculas e com hífens, coloque `company: 'nome-escolhido'` no item e salve a imagem com esse nome.
-- A logo aparece num selo claro, pequeno e proporcional (sem esticar), que garante a leitura sobre o pôr do sol. Sem arquivo, não aparece imagem quebrada nem espaço vazio. Como as imagens passam pelo Vite, funcionam igual na Vercel.
+- Formats: `.svg`, `.png`, `.webp`, `.jpg`, `.jpeg` and `.avif`, ideally with a transparent background and no large margin around it.
+- New company: pick a lowercase name with hyphens, add `company: 'chosen-name'` to the item and save the image with that name.
+- In the journey, the logo sits on a small light badge, with gently rounded corners and its own proportions (never stretched), so it reads well over the sunset. The "what I do today" postcards wear it like a stamp. Without a file, there is no broken image or empty space. Since the images go through Vite, they work the same on Vercel.
 
-## Idiomas
+</details>
 
-- Português é o padrão (`/`); inglês fica em `/en/`. A página de links é `/links/` e `/en/links/`, e abre direto pelo endereço.
-- O build gera um HTML por página e idioma, com `lang`, título, descrição, `hreflang`, link canônico e prévia social corretos, para buscadores e aplicativos que não executam JavaScript.
-- A troca de idioma não recarrega a página: o texto se refaz com uma transição suave, a URL e os metadados são atualizados e a escolha fica salva no navegador.
-- Os textos da interface ficam em `src/i18n/messages/`. O arquivo `en.ts` é tipado a partir do `pt-BR.ts`, então o TypeScript avisa se faltar alguma tradução.
-- Nomes próprios, de projetos e de tecnologias não são traduzidos.
+<details>
+<summary><b>🌐 Languages</b></summary>
+<br>
 
-## Sons
+- Portuguese is the default (`/`); English lives at `/en/`. The links page is `/links/` and `/en/links/`, and opens directly from its address.
+- The build generates one HTML file per page and language, with the right `lang`, title, description, `hreflang`, canonical link and social preview, for search engines and apps that don't run JavaScript.
+- Switching languages doesn't reload the page: the text rebuilds with a soft transition, the URL and metadata update and the choice is saved in the browser.
+- The interface texts live in `src/i18n/messages/`. `en.ts` is typed from `pt-BR.ts`, so TypeScript warns if a translation is missing.
+- Proper names, project names and technology names are not translated.
 
-Os efeitos sonoros (inserir e ejetar um disquete, as ondas de rádio, abrir e fechar o README, escolher um filtro, o passarinho, o sininho da auréola, copiar o e-mail) são **sintetizados na hora** com a Web Audio API: não há arquivo de áudio para baixar nem serviço externo.
+</details>
 
-- Nada toca ao abrir a página. O som só começa depois de um gesto da pessoa (clique, toque ou tecla), como os navegadores exigem; passar o mouse não conta.
-- O botão de alto-falante no cabeçalho liga e desliga, e a escolha fica salva no navegador.
-- Os sons ficam em `src/composables/sound.ts`, cada um numa receita curta.
+<details>
+<summary><b>🔊 Sounds</b></summary>
+<br>
 
-## Publicando na Vercel
+The sound effects (inserting and ejecting a floppy disk, the radio waves, opening and closing a README, picking a filter, the little bird, the bell of the halo, copying the email) are **synthesized on the spot** with the Web Audio API: there is no audio file to download and no external service.
 
-O endereço do portfólio é `4kauanmota.com.br` (o `defaultUrl` de `src/content/site.ts`). O portfólio atual está na Vercel, então ela é o caminho mais direto.
+- Nothing plays when the page opens. Sound only starts after a gesture (a click, tap or key press), as browsers require; hovering doesn't count.
+- The speaker button in the header turns sounds on and off, and the choice is saved in the browser.
+- The sounds live in `src/composables/sound.ts`, each one a short recipe.
 
-> **Antes de criar o repositório:** não use o repositório `4kauanmota/4kauanmota`. Ele é o README do seu perfil no GitHub, e o README deste projeto substituiria o do perfil. Um nome que segue sua convenção é `4kauanmota-web`.
+</details>
 
-1. Crie o repositório no GitHub e envie este projeto.
-2. Na Vercel, importe o repositório. O framework (Vite), o comando (`npm run build`) e a pasta (`dist`) são detectados sozinhos, e o `vercel.json` já define o resto. As imagens dos projetos são convertidas no próprio build da Vercel (o `sharp` é instalado junto).
-3. Em *Settings › Environment Variables*, adicione `GITHUB_TOKEN`: um *fine-grained token* criado em [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens/new), sem nenhuma permissão extra (o acesso só de leitura a repositórios públicos basta). Ele só aumenta o limite da API; funciona sem ele, com o limite menor.
-4. Em *Settings › Domains*, adicione `4kauanmota.com.br` (e, se quiser, `www.4kauanmota.com.br` redirecionando para ele). A Vercel mostra os registros de DNS que precisam ser criados no registro.br; copie os valores exatamente como aparecem lá. Com o domínio ativo, o endereço canônico, o sitemap e as tags de compartilhamento usam o domínio de produção sozinhos. Se publicar em outro endereço, defina `SITE_URL`.
-5. O endereço `4kauanmota.vercel.app` ainda é do portfólio antigo. Se quiser que ele também leve a este, ligue o projeto antigo da Vercel a este repositório (*Settings › Git*) ou tire o domínio do projeto antigo e adicione a este (*Settings › Domains*).
+## How the GitHub integration works
 
-### Atualização automática dos projetos
+**Why at build time and not in the browser:** the public API without a token allows 60 requests per hour *per visitor*, and any shared network would hit the limit. A token can't go to the browser either. So the site fetches everything **during the build**, with the token kept only on the server, and ships a ready, fast file.
 
-A Vercel publica de novo a cada push. Para pegar repositórios novos e links de site novos (o campo *Website* do GitHub) sem precisar de push:
+The `scripts/sync-github.ts` script:
 
-1. Na Vercel, em *Settings › Git › Deploy Hooks*, crie um hook (ex.: "atualizar projetos") e copie a URL.
-2. No GitHub, em *Settings › Secrets and variables › Actions* do repositório do portfólio, crie o secret `VERCEL_DEPLOY_HOOK` com essa URL.
-3. O workflow `.github/workflows/refresh-projects.yml` dispara um deploy todo dia às 6h17 (horário de Brasília). Ele também pode ser rodado à mão na aba *Actions*.
+1. Lists the public repositories of `4kauanmota`. Forks, the profile repository and anything with the `portfolio-hide` topic are left out.
+2. Sorts them by the repository's **creation date**, newest to oldest (the update date doesn't change the order).
+3. Builds the name from the repository name, without your naming suffix (`manda-trends-web` → "Manda Trends", `food-api` → "Food"): the type shows on the tag next to the name, without repeating it.
+4. Downloads each repository's README and converts it to HTML **at build time** (see the README reader below). A repository with no push since the last sync reuses the README already converted, without spending a request. Without a README, the **Read the project's README** button doesn't show.
+5. Checks whether the published site (the repository's *Website* field or GitHub Pages) responds. Links that are down are left out. A link that uses an address of this portfolio (`4kauanmota.com.br` or the Vercel one, in `src/content/site.ts`) is only removed if the page published there really is this portfolio (the script opens the page and looks for its signature): today `space-portfolio-web` points to `4kauanmota.vercel.app`, where the old portfolio still lives, so **Visit site** shows. Once this portfolio takes over that address, the link goes away on its own in the next sync. Without a network to check, the link is only removed if the address is the deploy's own (`SITE_URL` or Vercel's production domain).
+6. Writes `src/generated/projects.json` and one file per README in `src/generated/readmes/`, which go into the site.
+7. Prints a summary in the log: which projects have the **Visit site** button (and whether the link came from GitHub or from the config), which ones have no description and which repositories don't have an entry in the config yet.
 
-O workflow `ci.yml` roda testes, checagem de tipos e build a cada push.
+In the browser, the GitHub list is merged with `src/content/projects.config.ts` (descriptions, types, links and non-GitHub projects). What is edited by hand never comes from GitHub, and what comes from GitHub never needs to be copied into the config.
 
-### Outros serviços
+A new repository shows up on its own in the next build, at the top of the list (it is the most recent), with the type suggested by its topics and language and no description, until you fill in its entry. If the API fails during the build, the site uses the last saved snapshot and stays up. If the API limit runs out halfway, the list and the new links are saved anyway.
 
-O resultado do build é estático: funciona no Netlify, no Cloudflare Pages ou no GitHub Pages. Para publicar como projeto do GitHub Pages (`4kauanmota.github.io/nome-do-repo/`), rode o build com `BASE_PATH=/nome-do-repo/`.
+> [!NOTE]
+> **"Visit site" didn't show up after filling in the *Website* field on GitHub?** The site is generated at build time, so the change only shows in a new deploy: push, redeploy on Vercel or set up the [automatic project refresh](#automatic-project-refresh). Without `GITHUB_TOKEN`, Vercel may hit the API limit and use the old snapshot; the build log lists the links it found. To set the link without depending on GitHub, use `liveUrl` in `projectDetails`.
 
-## Estrutura do projeto
+<details>
+<summary><b>📖 The README reader</b></summary>
+<br>
+
+The **Read the project's README** button opens the README inside the portfolio, in a reading window (instead of sending people to GitHub). Headings, lists, tables (which scroll sideways on phones), code blocks, quotes, GitHub alerts (`> [!NOTE]`…), task lists and images are all formatted; with three headings or more, a table of contents appears. It closes with the X, with Esc, by clicking outside or with the browser's back button, and the focus returns to the card.
+
+**Faithful to GitHub:** the alignment the README asks for is respected (`<p align="center">`, `<div align="center">`, centered images and headings, images with `align="left"` or `align="right"` beside the text and table column alignment). Images and badges sit side by side like on GitHub, without stretching; wide images never go past the reader's width. Images made only for GitHub's dark theme (`#gh-dark-mode-only` and `<picture>` with `prefers-color-scheme: dark`) are left out, so they don't show twice.
+
+**Security:** the README is outside content, so it is treated as untrusted. It is converted at build time with `marked` and goes through `sanitize-html` with a closed list of what may stay: no scripts, `iframe`, forms, `style`, event attributes (`onclick`…) or inline SVG; links only `https:` and `mailto:`; images only `https:`. Relative links and images point to the repository on GitHub. No token ever reaches the browser: the site only loads the already clean HTML, and only when someone opens the reader.
+
+</details>
+
+<details>
+<summary><b>🖼️ The gallery</b></summary>
+<br>
+
+All cards have the same size: image, name with the type tag, description in the site's language, creation date (as a stamp on the image) and the buttons for the site, the repository and the README. While a project's image loads, the photo shows a small patch of sky where a constellation forms (each project with its own, each card in its own time); when the image arrives, the sky dissolves into it. The photo space is always the same, so nothing jumps. If the image fails, or takes more than 20 seconds, the site's artwork takes its place (and the image still shows if it arrives later). The gallery starts with the first projects (two rows on desktop, three cards on phones) and opens with **Show more** (and closes with **Show less**), always newest to oldest, even with a filter picked.
+
+With the mouse over a card, it rises a little, a light follows the pointer and the image drifts slowly the other way, like a photo with depth. The card doesn't change size and nothing covers the buttons. With the keyboard, focusing any button on the card gives it the same highlight.
+
+</details>
+
+## Deploying on Vercel
+
+The portfolio's address is `4kauanmota.com.br` (the `defaultUrl` in `src/content/site.ts`). The current portfolio is on Vercel, so that is the most direct path.
+
+> [!IMPORTANT]
+> **Before creating the repository:** don't use `4kauanmota/4kauanmota`. That one is your GitHub profile README, and this project's README would replace it. A name that follows your convention is `4kauanmota-web`.
+
+1. Create the repository on GitHub and push this project.
+2. On Vercel, import the repository. The framework (Vite), the command (`npm run build`) and the folder (`dist`) are detected on their own, and `vercel.json` sets the rest. Project images are converted in Vercel's own build (`sharp` is installed with it).
+3. In *Settings › Environment Variables*, add `GITHUB_TOKEN`: a *fine-grained token* created at [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens/new), with no extra permissions (read-only access to public repositories is enough). It only raises the API limit; everything works without it, with the lower limit.
+4. In *Settings › Domains*, add `4kauanmota.com.br` (and, if you want, `www.4kauanmota.com.br` redirecting to it). Vercel shows the DNS records to create at registro.br; copy the values exactly as they appear there. Once the domain is active, the canonical address, the sitemap and the sharing tags use the production domain on their own. If you publish at another address, set `SITE_URL`.
+5. The `4kauanmota.vercel.app` address still belongs to the old portfolio. If you want it to lead here too, connect the old Vercel project to this repository (*Settings › Git*) or remove the domain from the old project and add it to this one (*Settings › Domains*).
+
+### Automatic project refresh
+
+Vercel publishes again on every push. To pick up new repositories and new site links (GitHub's *Website* field) without a push:
+
+1. On Vercel, in *Settings › Git › Deploy Hooks*, create a hook (for example "refresh projects") and copy its URL.
+2. On GitHub, in the portfolio repository's *Settings › Secrets and variables › Actions*, create the `VERCEL_DEPLOY_HOOK` secret with that URL.
+3. The `.github/workflows/refresh-projects.yml` workflow triggers a deploy every day at 6:17 (Brasília time). It can also be run by hand in the *Actions* tab.
+
+The `ci.yml` workflow runs the tests, type checking and the build on every push.
+
+### Other hosts
+
+The build output is static: it works on Netlify, Cloudflare Pages or GitHub Pages. To publish as a GitHub Pages project (`4kauanmota.github.io/repo-name/`), run the build with `BASE_PATH=/repo-name/`.
+
+## Project structure
 
 ```text
-├── index.html                 # modelo do HTML (o build gera uma cópia por página e idioma)
-├── vite.config.ts             # Vue + plugins: imagens dos projetos, HTML por idioma, sitemap e robots.txt
+├── index.html                 # HTML template (the build makes one copy per page and language)
+├── vite.config.ts             # Vue + plugins: project images, HTML per language, sitemap and robots.txt
+├── docs/readme/               # the images in this README
 ├── scripts/
-│   ├── sync-github.ts         # sincronização com o GitHub
-│   ├── lib/                   # cliente da API, nomes e categorias, README (Markdown limpo), checagem de links
-│   └── vite/project-images.ts # descobre e otimiza as imagens dos projetos
+│   ├── sync-github.ts         # GitHub sync
+│   ├── lib/                   # API client, names and categories, README (clean Markdown), link checks
+│   └── vite/project-images.ts # finds and optimizes the project images
 ├── src/
-│   ├── content/               # todo o conteúdo editável
+│   ├── content/               # all the editable content
 │   ├── assets/
-│   │   ├── projects/          # imagens dos projetos (nome do repositório)
-│   │   ├── companies/         # logos das empresas da trajetória
-│   │   └── textures/          # nuvens pintadas usadas no céu
-│   ├── i18n/                  # traduções da interface, rotas e metadados
-│   ├── generated/             # snapshot dos projetos e READMEs (gerado; não editar)
+│   │   ├── profile/           # the home page portrait (any name, one image)
+│   │   ├── projects/          # project images (named after the repository)
+│   │   ├── companies/         # company logos for the journey
+│   │   └── textures/          # painted clouds used in the sky
+│   ├── i18n/                  # interface translations, routes and metadata
+│   ├── generated/             # project and README snapshot (generated; don't edit)
 │   ├── components/
-│   │   ├── atmosphere/        # céus de cada hora do dia, auréolas, grão de filme
-│   │   ├── brand/             # logotipo
+│   │   ├── atmosphere/        # the sky for each hour of the day, halos, film grain
+│   │   ├── brand/             # the logo
 │   │   ├── hero/ projects/ about/ curiosities/ links/ layout/
-│   ├── composables/           # cena de rolagem (profundidade), abrir e fechar, seções, projetos, README, sons
-│   ├── lib/                   # tipos, junção dos projetos, endereços, distribuição da trajetória, geometria dos fios
-│   ├── directives/            # v-reveal (entrada dos elementos na tela)
-│   ├── pages/                 # início, /links e 404
-│   └── styles/                # tokens (cores, fontes) e base
+│   ├── composables/           # scroll scene (depth), open and close, sections, projects, README, sounds, portrait
+│   ├── lib/                   # types, project merging, addresses, journey layout, wire and film geometry
+│   ├── directives/            # v-reveal (elements entering the screen)
+│   ├── pages/                 # home, /links and 404
+│   └── styles/                # tokens (colors, fonts) and base
 ├── public/
-│   └── images/                # suas imagens: foto e curiosidades (crie quando precisar)
-└── tests/                     # testes (node:test)
+│   └── images/curiosities/    # images for the floppy disks (create it when you need it)
+└── tests/                     # tests (node:test)
 ```
 
-## Identidade visual
+## Visual identity
 
-**Conceito:** um dia inteiro de lembranças. Cada seção é uma hora do dia, e a página nunca corta de uma para outra: cada céu termina na mesma cor em que o próximo começa, e nuvens atravessam as divisas.
+<img src="docs/readme/palette.svg" width="100%" alt="Palette: noon #e9d055, straw #ece3c5, afternoon #f4ead2, sunset #f6bf91 and #f0a07e, twilight #a77ea8 and #3a3d72, night #131833, dawn #a98cbb and #eab3c1, sepia ink #2a2518.">
 
-| Seção | Hora | O que aparece |
+**Concept:** a whole day of memories. Every section is an hour of the day, and the page never cuts from one to the next: each sky ends in the same color where the next one begins, and clouds cross the borders.
+
+**Logo:** the "o" in 4kauanmota is the light itself. Large, it becomes a glowing ring with a light that slowly runs around it; small (header, footer), it is a lit golden "o".
+
+**Halos:** each one has its own shape: a ring of particles (the portrait on the links page), orbiting stars (the "now", at the end of the journey) and a broken ring (the 404 page). The home portrait and the curiosities have no halo.
+
+**Palette:** everything lives in `src/styles/tokens.css`. The floppy disks use pastel tones (lilac, pink, blue, mint, yellow and peach).
+
+**Typography:** *Jost* (geometric and thin, with the round "o" that becomes light in the logo), *Spectral* (a delicate serif for the texts) and *Nanum Pen Script* (handwriting, only on the floppy disk labels).
+
+<details>
+<summary><b>☀️ What each hour looks like, in detail</b></summary>
+<br>
+
+| Section | Hour | What shows up |
 | --- | --- | --- |
-| Início | Meio-dia | Céu dourado, nuvens pintadas, fios balançando presos a um poste (com um passarinho que dá uns passinhos pelo fio, para, dá pulinhos de vez em quando e voa quando você chega perto), um bando que cruza o céu e o retrato, limpo, direto no céu |
-| Projetos | Tarde | Luz de janela atravessando a sala, poeira nos feixes e a sombra de uma nuvem que passa; a galeria |
-| Sobre mim | Pôr do sol | Um sol que conta uma história com a rolagem: surge discreto, ganha brilho, perde a luz, incha e se desfaz aos poucos (forma, brilho e intensidade) até explodir como uma estrela, em partículas e fragmentos que se apagam. Tudo segue a rolagem e volta ao subir. Um banco de nuvens com fagulhas de luz, nuvens soltas e pássaros; cartões-postais do que faço hoje, as áreas com astros da mesma família (sol radiante, estrela em órbita, estrela cadente, constelação, sol com coroa e estrela-guia) e a trajetória |
-| Curiosidades | Noite | Estrelas, estrelas de quatro pontas e cadentes; a TV e o leitor de disquetes flutuando, ligados pelo cabo; fragmentos de um filme de lembranças em volta, cada quadro com um desenho em silhueta, em tons pastéis; ondas de rádio quando um disquete entra |
-| Links | Amanhecer | Violeta, lilás, rosa e dourado; um mar de nuvens, o sol nasce atrás dele e a luz volta |
+| Home | Noon | A golden sky, painted clouds, wires swaying from a pole (with a little bird that takes a few steps along the wire, stops, hops now and then and flies off when you get close), a flock crossing the sky and the portrait, clean, right in the sky |
+| Projects | Afternoon | Window light across the room, dust in the beams and the shadow of a passing cloud; the gallery |
+| About | Sunset | A sun that tells a story as you scroll: it appears discreetly, gains light, loses it, swells and slowly comes apart (shape, light and intensity) until it bursts like a star, into particles and fragments that fade out. Everything follows the scroll and comes back when you scroll up. A bank of clouds with sparks of light, loose clouds and birds; postcards of what I do today, the areas with stars of the same family (a radiant sun, an orbiting star, a shooting star, a constellation, a crowned sun and a guiding star) and the journey |
+| Curiosities | Night | Stars, four-point stars and shooting stars; the TV and the floppy drive floating, linked by their cable; fragments of a film of memories around them, each frame with a silhouette drawing, in pastel tones; radio waves when a disk goes in |
+| Links | Dawn | Violet, lilac, pink and gold; a sea of clouds, the sun rising behind it and the light coming back |
 
-**Logotipo:** o "o" de 4kauanmota é a própria luz. Grande, vira um anel luminoso com uma luz que percorre o anel devagar; pequeno (cabeçalho, rodapé), é um "o" dourado aceso.
+</details>
 
-**Auréolas:** cada uma tem uma forma: anel de partículas (retrato da página de links), estrelas em órbita (o "agora", no fim da trajetória) e anel partido (página 404). O retrato do início e as curiosidades não têm auréola.
+## Accessibility and motion
 
-**Paleta:** meio-dia `#e9d055`, palha `#ece3c5`, tarde `#f4ead2`, pôr do sol `#f6bf91` e `#f0a07e`, crepúsculo `#a77ea8` e `#3a3d72`, noite `#131833`, amanhecer `#a98cbb` e `#eab3c1`, tinta sépia `#2a2518`. Os disquetes usam tons pastel (lilás, rosa, azul, menta, amarelo e pêssego). Tudo em `src/styles/tokens.css`.
+- Keyboard navigation everywhere, with visible focus and a "Skip to content" link.
+- AA contrast on every layer (checked with axe-core).
+- The mobile menu uses the native `<dialog>`: focus is trapped, Esc closes it and the focus returns to the button that opened it.
+- Project cards get the same highlight with the mouse and with keyboard focus; the effect that follows the pointer only exists with a mouse.
+- **Show more**, **Read more** and the floppy disks announce their state (`aria-expanded`, `aria-pressed`) and what changed to screen readers; collapsed text doesn't take focus.
+- Texts in another language get the right `lang` attribute, so screen readers pronounce them properly.
+- The README reader is a `<dialog>` with a title, focus trapped while open and focus returned on close; its body scrolls with the keyboard.
+- With "reduce motion" turned on in the system, halos, clouds, wires, film strips, birds, scroll depth and transitions stop, the floppy disks swap without flying, the strips don't sway, the little bird stays still on the wire, the image loading shows the constellation already formed and the sun stays still in the sky, without coming apart or bursting; nothing depends on animation to be understood.
+- The language switch uses the same font, size and weight as the menu, and marks the chosen language with the same little light as the current section (plus `aria-pressed` for screen readers).
+- Scroll depth only uses `transform` and is softer on phones: background, ornaments and illustrations move at different speeds, while titles, texts and buttons stay put, for reading, for clicking and so they never touch each other. Animations of sections off screen are paused, and the sun is only drawn while it is near the screen.
+- **Light on every browser:** the film strips are only redrawn while the wave is visibly moving them (about 30 times per second, and each strip stops as soon as its sway is under half a pixel), and when the TV screen grows they settle once and glide into place instead of being rebuilt on every frame. The radio waves and the screen's static are drawn with gradients, with no blur being redone on every frame.
+- The big logo (4kauanmota) and the Projects title are lettering drawings and can't be selected; all the other text stays selectable.
+- Sounds never play on their own and can be turned off in the header.
 
-**Tipografia:** *Jost* (geométrica, fina, com o "o" circular que vira luz no logotipo), *Spectral* (serifa delicada para os textos) e *Nanum Pen Script* (escrita à mão, só nas etiquetas dos disquetes).
+## Credits
 
-## Acessibilidade e movimento
+- Fonts: Jost, Spectral and Nanum Pen Script (SIL Open Font License), via Fontsource, served by the site itself.
+- Brand icons: [Simple Icons](https://simpleicons.org) (CC0).
+- Clouds, skies, halos and illustrations were made for this site.
 
-- Navegação por teclado em tudo, com foco visível e link "Pular para o conteúdo".
-- Contraste AA em todas as camadas (verificado com axe-core).
-- O menu do celular usa `<dialog>` nativo: foco preso, Esc fecha e o foco volta ao botão que abriu.
-- Os cards de projeto têm o mesmo destaque com o mouse e com o foco do teclado; o efeito que segue o ponteiro só existe com mouse.
-- **Mostrar mais**, **Ler mais** e os disquetes avisam o estado (`aria-expanded`, `aria-pressed`) e anunciam o que mudou para leitores de tela; o texto recolhido não recebe foco.
-- Textos em outro idioma recebem o atributo `lang` correto, para os leitores de tela pronunciarem direito.
-- O leitor de README é um `<dialog>` com título, foco preso enquanto aberto e retorno do foco ao fechar; o corpo rola pelo teclado.
-- Com "reduzir movimento" ativado no sistema, auréolas, nuvens, fios, fitas, pássaros, profundidade da rolagem e transições param, os disquetes trocam sem voo, as fitas não balançam, o passarinho fica parado no fio, o carregamento das imagens mostra a constelação já formada e o sol fica parado no céu, sem se desfazer nem explodir; nada depende de animação para ser entendido.
-- O seletor de idiomas usa a mesma letra, tamanho e peso do menu, e marca o idioma escolhido com a mesma luzinha da seção atual (além de `aria-pressed` para leitores de tela).
-- A profundidade da rolagem só usa `transform` e é mais suave no celular: fundo, enfeites e ilustrações andam em velocidades diferentes, e títulos, textos e botões ficam parados, para a leitura, os cliques e para nunca encostarem uns nos outros. Animações de seções fora da tela ficam pausadas, e o sol só é desenhado enquanto está perto da tela.
-- O logotipo grande (4kauanmota) e o título Projetos são desenhos de letras e não se selecionam; todo o resto do texto continua selecionável.
-- Os sons nunca tocam sozinhos e podem ser desligados no cabeçalho.
-
-## Créditos
-
-- Fontes: Jost, Spectral e Nanum Pen Script (SIL Open Font License), via Fontsource, servidas pelo próprio site.
-- Ícones de marca: [Simple Icons](https://simpleicons.org) (CC0).
-- Nuvens, céus, auréolas e ilustrações foram feitos para este site.
+<p align="center"><sub>Made of memories and dreams.</sub></p>
