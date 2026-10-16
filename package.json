@@ -1,0 +1,39 @@
+{
+  "name": "4kauanmota-web",
+  "version": "1.5.3",
+  "private": true,
+  "type": "module",
+  "description": "Portfólio pessoal de 4kauanmota: memórias, projetos do GitHub e curiosidades, em português e inglês.",
+  "scripts": {
+    "dev": "vite",
+    "sync:github": "tsx scripts/sync-github.ts",
+    "prebuild": "tsx scripts/sync-github.ts --soft",
+    "build": "vue-tsc -b && vite build",
+    "build:offline": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc -b",
+    "test": "tsx --test \"tests/**/*.test.ts\""
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/jost": "^5.3.0",
+    "@fontsource/nanum-pen-script": "^5.3.0",
+    "@fontsource/spectral": "^5.3.0",
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "@types/sanitize-html": "^2.16.2",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vue/tsconfig": "^0.9.1",
+    "marked": "^18.0.14",
+    "sanitize-html": "^2.17.7",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.1",
+    "vue-tsc": "^3.3.11"
+  }
+}

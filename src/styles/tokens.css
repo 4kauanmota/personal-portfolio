@@ -1,0 +1,168 @@
+/*
+ * Um dia inteiro de lembrança, num céu contínuo:
+ * meio-dia dourado (início) → luz da tarde (projetos) → pôr do sol (sobre)
+ * → noite (curiosidades) → amanhecer (links e rodapé).
+ * Cada seção começa exatamente na cor em que a anterior termina (--b-*),
+ * então não existe linha nem faixa entre elas.
+ */
+:root {
+  /* Meio-dia */
+  --noon-haze: #fbf4d6;
+  --sun: #e9d055;
+  --sun-deep: #dfba3f;
+  --sun-bloom: #f6ecbd;
+  --straw: #ece3c5;
+  --straw-light: #f3eddb;
+  --bleach: #f8f4e8;
+
+  /* Calor */
+  --amber: #d49e2e;
+  --ochre: #a5732f;
+  --umber: #56330d;
+  --logo-gold: #b98420;
+
+  /* Tinta (texto sobre luz) */
+  --ink: #2a2518;
+  --ink-2: #574b35;
+  --ink-3: #6a5d44;
+
+  /* Tarde */
+  --afternoon: #f4ead2;
+  --afternoon-warm: #f6e2c4;
+
+  /* Pôr do sol */
+  --sunset-peach: #f8d4b0;
+  --sunset-apricot: #f6bf91;
+  --sunset-coral: #f0a07e;
+  --sunset-rose: #e391a0;
+  --sunset-core: #fff1cf;
+  --dusk-mauve: #a77ea8;
+  --dusk-violet: #6c5c98;
+  --dusk-indigo: #3a3d72;
+  --sunset-ink: #2e1a14;
+  --sunset-ink-2: #4f2c22;
+  --sunset-ink-3: #5c3426;
+
+  /* Noite */
+  --night-0: #2a2e5e;
+  --night-1: #1b2042;
+  --night-2: #131833;
+  --night-3: #0e1227;
+  --night-text: #ece8f4;
+  --night-text-2: #bdb8d4;
+  --night-text-3: #9d98b8;
+
+  /* Amanhecer */
+  --dawn-violet: #4b4b7e;
+  --dawn-lilac: #a98cbb;
+  --dawn-pink: #eab3c1;
+  --dawn-peach: #f8cfae;
+  --dawn-gold: #f6e2a4;
+  --dawn-pale: #fbf2dc;
+
+  /* Fronteiras entre as seções (a mesma cor dos dois lados) */
+  --b-hero-projects: #f3e8cd;
+  --b-projects-about: #f7d9b8;
+  --b-about-night: #2a2e5e;
+  --b-night-dawn: #161b37;
+  --b-dawn-footer: #fbf2dc;
+
+  /* Auréola */
+  --halo: #fffbea;
+  --halo-warm: #fff1c4;
+  --iris-cyan: #63b8c8;
+  --iris-violet: #a75eb6;
+  --iris-indigo: #5059a8;
+  --iris-green: #6dc768;
+  --iris-gold: #e9d055;
+  --iris: conic-gradient(
+    from 0deg,
+    var(--iris-cyan),
+    var(--iris-violet),
+    var(--iris-indigo),
+    var(--iris-green),
+    var(--iris-gold),
+    var(--iris-cyan)
+  );
+
+  /* Disquetes (tons pastel, puxados para a luz do site) */
+  --disk-lilac: #c9b6e4;
+  --disk-pink: #f2c2cf;
+  --disk-blue: #b9d8ee;
+  --disk-mint: #bfe5d0;
+  --disk-yellow: #f4e3a1;
+  --disk-peach: #f7c9a7;
+
+  /* Tipografia */
+  --font-display: 'Jost Variable', 'Jost', 'Futura', 'Century Gothic', ui-sans-serif, system-ui, sans-serif;
+  --font-prose: 'Spectral', 'Iowan Old Style', 'Palatino Linotype', Georgia, ui-serif, serif;
+  --font-hand: 'Nanum Pen Script', 'Segoe Print', 'Bradley Hand', cursive;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-prose: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+  --text-xl: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 6rem);
+
+  /* Espaço */
+  --gutter: clamp(1rem, 0.6rem + 2.4vw, 3rem);
+  --section-pad: clamp(4.5rem, 3rem + 7vw, 10rem);
+  /* Altura das passagens de uma luz para outra (pôr do sol, anoitecer, amanhecer). */
+  --passage: clamp(16rem, 10rem + 26vh, 30rem);
+  --measure: 38rem;
+  --page-max: 78rem;
+
+  /* Movimento */
+  --ease-dream: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-surface: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-quick: 180ms;
+  --dur-soft: 420ms;
+  --dur-develop: 900ms;
+
+  --radius-s: 6px;
+  --radius-m: 14px;
+  --header-h: 4rem;
+}
+
+/* Cada seção define o próprio clima; os componentes só usam estas variáveis. */
+.theme-light {
+  --fg: var(--ink);
+  --fg-2: var(--ink-2);
+  --fg-3: var(--ink-3);
+  --line: rgb(42 37 24 / 0.16);
+  --line-strong: rgb(42 37 24 / 0.42);
+  --surface: rgb(255 252 242 / 0.62);
+  --focus: var(--ink);
+  --link: var(--umber);
+  --logo-o: var(--logo-gold);
+  color: var(--fg);
+}
+
+.theme-sunset {
+  --fg: var(--sunset-ink);
+  --fg-2: var(--sunset-ink-2);
+  --fg-3: var(--sunset-ink-3);
+  --line: rgb(46 26 20 / 0.18);
+  --line-strong: rgb(46 26 20 / 0.42);
+  --surface: rgb(255 246 236 / 0.58);
+  --focus: var(--sunset-ink);
+  --link: var(--sunset-ink-2);
+  --logo-o: #9a4a1c;
+  color: var(--fg);
+}
+
+.theme-night {
+  --fg: var(--night-text);
+  --fg-2: var(--night-text-2);
+  --fg-3: var(--night-text-3);
+  --line: rgb(236 232 244 / 0.14);
+  --line-strong: rgb(236 232 244 / 0.4);
+  --surface: rgb(236 232 244 / 0.05);
+  --focus: var(--halo);
+  --link: var(--halo);
+  --logo-o: #ffe08a;
+  color: var(--fg);
+}

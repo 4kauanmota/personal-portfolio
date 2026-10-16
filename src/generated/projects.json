@@ -1,0 +1,443 @@
+{
+  "generatedAt": "2026-10-15T01:38:15.627Z",
+  "username": "4kauanmota",
+  "profileUrl": "https://github.com/4kauanmota",
+  "repoCount": 27,
+  "readmeFormat": 3,
+  "projects": [
+    {
+      "id": "4notes-web",
+      "title": "4notes",
+      "url": "https://github.com/4kauanmota/4notes-web",
+      "readmeUrl": "https://github.com/4kauanmota/4notes-web/blob/main/README.md",
+      "liveUrl": "https://4notes-web.vercel.app/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "Vue",
+      "createdAt": "2026-10-13T19:35:39Z",
+      "pushedAt": "2026-10-13T19:36:07Z",
+      "archived": false
+    },
+    {
+      "id": "pixel-mole-web",
+      "title": "Pixel Mole",
+      "url": "https://github.com/4kauanmota/pixel-mole-web",
+      "readmeUrl": "https://github.com/4kauanmota/pixel-mole-web/blob/main/README.md",
+      "liveUrl": "https://pixelmole.com.br/",
+      "liveKind": "site",
+      "kind": "game",
+      "categories": [
+        "games",
+        "web"
+      ],
+      "language": "Vue",
+      "createdAt": "2026-10-13T15:22:58Z",
+      "pushedAt": "2026-10-13T20:57:04Z",
+      "archived": false
+    },
+    {
+      "id": "4notes-app",
+      "title": "4notes",
+      "url": "https://github.com/4kauanmota/4notes-app",
+      "readmeUrl": "https://github.com/4kauanmota/4notes-app/blob/main/README.md",
+      "liveUrl": "https://4notes-web.vercel.app/",
+      "liveKind": "site",
+      "kind": "app",
+      "categories": [
+        "apps"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2026-10-02T18:12:00Z",
+      "pushedAt": "2026-10-13T17:15:49Z",
+      "archived": false
+    },
+    {
+      "id": "customers-api",
+      "title": "Customers",
+      "url": "https://github.com/4kauanmota/customers-api",
+      "readmeUrl": "https://github.com/4kauanmota/customers-api/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": "api",
+      "categories": [
+        "servers"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2024-12-22T16:29:00Z",
+      "pushedAt": "2025-01-11T18:11:33Z",
+      "archived": false
+    },
+    {
+      "id": "dev-calc-web",
+      "title": "Dev Calc",
+      "url": "https://github.com/4kauanmota/dev-calc-web",
+      "readmeUrl": "https://github.com/4kauanmota/dev-calc-web/blob/master/README.md",
+      "liveUrl": "https://dev-calc-five.vercel.app/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "Vue",
+      "createdAt": "2024-03-25T21:00:25Z",
+      "pushedAt": "2024-12-14T21:58:25Z",
+      "archived": false
+    },
+    {
+      "id": "create-react-toolkit-cli",
+      "title": "Create React Toolkit",
+      "url": "https://github.com/4kauanmota/create-react-toolkit-cli",
+      "readmeUrl": "https://github.com/4kauanmota/create-react-toolkit-cli/blob/main/README.md",
+      "liveUrl": "https://www.npmjs.com/package/create-react-toolkit",
+      "liveKind": "package",
+      "kind": "lib",
+      "categories": [
+        "tools",
+        "web"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2024-03-04T20:52:29Z",
+      "pushedAt": "2024-03-29T19:47:53Z",
+      "archived": false
+    },
+    {
+      "id": "art-portfolio-web",
+      "title": "Art Portfolio",
+      "url": "https://github.com/4kauanmota/art-portfolio-web",
+      "readmeUrl": "https://github.com/4kauanmota/art-portfolio-web/blob/main/README.md",
+      "liveUrl": "https://liana-olitole.vercel.app/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2024-01-29T19:31:07Z",
+      "pushedAt": "2024-05-08T02:21:20Z",
+      "archived": false
+    },
+    {
+      "id": "food-api",
+      "title": "Food",
+      "url": "https://github.com/4kauanmota/food-api",
+      "readmeUrl": "https://github.com/4kauanmota/food-api/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": "api",
+      "categories": [
+        "servers"
+      ],
+      "language": "Python",
+      "createdAt": "2023-12-20T21:32:28Z",
+      "pushedAt": "2024-01-11T22:00:35Z",
+      "archived": false
+    },
+    {
+      "id": "plant-paradise-app",
+      "title": "Plant Paradise",
+      "url": "https://github.com/4kauanmota/plant-paradise-app",
+      "readmeUrl": "https://github.com/4kauanmota/plant-paradise-app/blob/main/README.md",
+      "liveUrl": "https://imgur.com/a/h71mDBV",
+      "liveKind": "media",
+      "kind": "app",
+      "categories": [
+        "apps"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2023-09-06T14:54:06Z",
+      "pushedAt": "2024-03-16T16:14:29Z",
+      "archived": false
+    },
+    {
+      "id": "redux-shopping-web",
+      "title": "Redux Shopping",
+      "url": "https://github.com/4kauanmota/redux-shopping-web",
+      "readmeUrl": "https://github.com/4kauanmota/redux-shopping-web/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-09-04T04:17:40Z",
+      "pushedAt": "2023-12-18T21:11:44Z",
+      "archived": false
+    },
+    {
+      "id": "revenue-management-web",
+      "title": "Revenue Management",
+      "url": "https://github.com/4kauanmota/revenue-management-web",
+      "readmeUrl": "https://github.com/4kauanmota/revenue-management-web/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "C#",
+      "createdAt": "2023-08-25T17:28:31Z",
+      "pushedAt": "2024-03-04T21:00:30Z",
+      "archived": false
+    },
+    {
+      "id": "space-portfolio-web",
+      "title": "Space Portfolio",
+      "url": "https://github.com/4kauanmota/space-portfolio-web",
+      "readmeUrl": null,
+      "liveUrl": "https://4kauanmota.vercel.app/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2023-08-19T06:39:16Z",
+      "pushedAt": "2024-03-19T20:45:16Z",
+      "archived": false
+    },
+    {
+      "id": "revenue-search-app",
+      "title": "Revenue Search",
+      "url": "https://github.com/4kauanmota/revenue-search-app",
+      "readmeUrl": "https://github.com/4kauanmota/revenue-search-app/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-08-12T03:22:27Z",
+      "pushedAt": "2024-03-04T21:03:14Z",
+      "archived": false
+    },
+    {
+      "id": "expense-tracker-app",
+      "title": "Expense Tracker",
+      "url": "https://github.com/4kauanmota/expense-tracker-app",
+      "readmeUrl": "https://github.com/4kauanmota/expense-tracker-app/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-08-12T00:59:56Z",
+      "pushedAt": "2024-03-04T21:01:58Z",
+      "archived": false
+    },
+    {
+      "id": "guessing-game-app",
+      "title": "Guessing Game",
+      "url": "https://github.com/4kauanmota/guessing-game-app",
+      "readmeUrl": "https://github.com/4kauanmota/guessing-game-app/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-08-12T00:36:26Z",
+      "pushedAt": "2024-03-04T20:57:30Z",
+      "archived": false
+    },
+    {
+      "id": "restaurant-menu-app",
+      "title": "Restaurant Menu",
+      "url": "https://github.com/4kauanmota/restaurant-menu-app",
+      "readmeUrl": "https://github.com/4kauanmota/restaurant-menu-app/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "TypeScript",
+      "createdAt": "2023-08-09T18:34:11Z",
+      "pushedAt": "2024-03-16T14:43:37Z",
+      "archived": false
+    },
+    {
+      "id": "goals-app",
+      "title": "Goals",
+      "url": "https://github.com/4kauanmota/goals-app",
+      "readmeUrl": "https://github.com/4kauanmota/goals-app/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-07-28T14:23:25Z",
+      "pushedAt": "2024-03-04T21:02:34Z",
+      "archived": false
+    },
+    {
+      "id": "prediction-model-ai",
+      "title": "Prediction Model",
+      "url": "https://github.com/4kauanmota/prediction-model-ai",
+      "readmeUrl": "https://github.com/4kauanmota/prediction-model-ai/blob/main/README.md",
+      "liveUrl": "https://predictionmodel-ai-4kauanmota.bohr.io/",
+      "liveKind": "site",
+      "kind": "ai",
+      "categories": [
+        "ai"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-07-12T04:11:40Z",
+      "pushedAt": "2023-09-04T01:49:51Z",
+      "archived": false
+    },
+    {
+      "id": "revenue-control-web",
+      "title": "Revenue Control",
+      "url": "https://github.com/4kauanmota/revenue-control-web",
+      "readmeUrl": "https://github.com/4kauanmota/revenue-control-web/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "PHP",
+      "createdAt": "2023-07-12T03:45:53Z",
+      "pushedAt": "2023-11-11T13:44:51Z",
+      "archived": false
+    },
+    {
+      "id": "blog-web",
+      "title": "Blog",
+      "url": "https://github.com/4kauanmota/blog-web",
+      "readmeUrl": "https://github.com/4kauanmota/blog-web/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "CSS",
+      "createdAt": "2023-07-12T03:35:51Z",
+      "pushedAt": "2024-03-29T05:30:28Z",
+      "archived": false
+    },
+    {
+      "id": "sales-and-purchases-web",
+      "title": "Sales and Purchases",
+      "url": "https://github.com/4kauanmota/sales-and-purchases-web",
+      "readmeUrl": "https://github.com/4kauanmota/sales-and-purchases-web/blob/main/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "Java",
+      "createdAt": "2023-07-06T01:20:56Z",
+      "pushedAt": "2023-09-04T02:04:30Z",
+      "archived": false
+    },
+    {
+      "id": "perceptron-ai",
+      "title": "Perceptron",
+      "url": "https://github.com/4kauanmota/perceptron-ai",
+      "readmeUrl": "https://github.com/4kauanmota/perceptron-ai/blob/master/README.md",
+      "liveUrl": "https://master-perceptron-ai-4kauanmota.bohr.io/",
+      "liveKind": "site",
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-05-19T20:29:47Z",
+      "pushedAt": "2023-09-04T01:54:50Z",
+      "archived": false
+    },
+    {
+      "id": "account-finance-web",
+      "title": "Account Finance",
+      "url": "https://github.com/4kauanmota/account-finance-web",
+      "readmeUrl": "https://github.com/4kauanmota/account-finance-web/blob/master/README.md",
+      "liveUrl": null,
+      "liveKind": null,
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "Java",
+      "createdAt": "2023-05-08T16:56:56Z",
+      "pushedAt": "2023-09-04T01:46:59Z",
+      "archived": false
+    },
+    {
+      "id": "tic-tac-toe-web",
+      "title": "Tic Tac Toe",
+      "url": "https://github.com/4kauanmota/tic-tac-toe-web",
+      "readmeUrl": "https://github.com/4kauanmota/tic-tac-toe-web/blob/master/README.md",
+      "liveUrl": "https://master-tictactoe-web-4kauanmota.bohr.io/",
+      "liveKind": "site",
+      "kind": "game",
+      "categories": [
+        "games"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2023-02-28T11:57:53Z",
+      "pushedAt": "2023-09-04T02:02:07Z",
+      "archived": false
+    },
+    {
+      "id": "manda-trends-web",
+      "title": "Manda Trends",
+      "url": "https://github.com/4kauanmota/manda-trends-web",
+      "readmeUrl": "https://github.com/4kauanmota/manda-trends-web/blob/master/README.md",
+      "liveUrl": "https://4kauanmota.github.io/manda-trends-web/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "HTML",
+      "createdAt": "2022-12-29T20:26:19Z",
+      "pushedAt": "2023-01-17T01:13:03Z",
+      "archived": false
+    },
+    {
+      "id": "forum-web",
+      "title": "Forum",
+      "url": "https://github.com/4kauanmota/forum-web",
+      "readmeUrl": null,
+      "liveUrl": "https://forum.bohr.io/",
+      "liveKind": "site",
+      "kind": null,
+      "categories": [
+        "other"
+      ],
+      "language": "JavaScript",
+      "createdAt": "2022-11-30T02:44:04Z",
+      "pushedAt": "2023-02-28T15:20:09Z",
+      "archived": false
+    },
+    {
+      "id": "barber-web",
+      "title": "Barber",
+      "url": "https://github.com/4kauanmota/barber-web",
+      "readmeUrl": "https://github.com/4kauanmota/barber-web/blob/main/README.md",
+      "liveUrl": "https://alura_barber-web-4kauanmota.bohr.io/",
+      "liveKind": "site",
+      "kind": "web",
+      "categories": [
+        "web"
+      ],
+      "language": "HTML",
+      "createdAt": "2022-05-18T17:28:35Z",
+      "pushedAt": "2024-07-05T00:40:50Z",
+      "archived": false
+    }
+  ]
+}
